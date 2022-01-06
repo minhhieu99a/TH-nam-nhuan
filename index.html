@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra nam nhuan</title>
+</head>
+<body>
+<input id="nam"placeholder="Nhập số năm vào đây">
+<button id="nhap" onclick="Hienthira()">Click!</button>
+<p id="ad">Nhuận or không nhuận :) </p>
+<script>
+    function Hienthira() {
+        let a = Number(document.getElementById("nam").value);
+        let b = "Năm nhuận"
+        let c = "Năm không nhuận"
+        if (a % 4 == 0){
+            if (a%100==0){
+                if(a%400==0) {
+                    document.getElementById("ad").innerText=b;
+                }else{
+                    document.getElementById("ad").innerText=c;
+                }}
+            else {
+                document.getElementById("ad").innerText=b;}}
+        else {
+            document.getElementById("ad").innerText=c;}
+    }
+</script>
+</body>
+</html>
